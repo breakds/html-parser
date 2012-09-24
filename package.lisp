@@ -9,6 +9,7 @@
 	   #:get-tag
 	   #:get-text
 	   #:parse-html
+	   #:parse-webpage
 	   #:list-node
 	   #:match-child-nodes
 	   #:match-first-child

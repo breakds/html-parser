@@ -141,6 +141,14 @@ found"
 	    (loop for line = (read-line nil nil 'eof)
 	       until (eq line 'eof) collect line))))
 
+(defun prase-webpage (url)
+  "Parse the webpage read from an url"
+  (parse-html
+   (let ((stream (third (trivial-http:http-get url))))
+     (reduce (lambda (x y) (concatenate 'string x y))
+	     (loop for line = (read-line stream nil 'eof)
+		until (eq line 'eof) collect line)))))
+
 
 (defun list-node (node)
   "list the content of a node"
