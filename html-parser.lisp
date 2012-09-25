@@ -141,7 +141,7 @@ found"
 	    (loop for line = (read-line nil nil 'eof)
 	       until (eq line 'eof) collect line))))
 
-(defun prase-webpage (url)
+(defun parse-webpage (url)
   "Parse the webpage read from an url"
   (parse-html
    (let ((stream (third (trivial-http:http-get url))))

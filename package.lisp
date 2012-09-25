@@ -2,7 +2,7 @@
 
 (defpackage #:breakds.html-parser
   (:use #:cl)
-  (:nicknames "html-parser")
+  (:nicknames #:html-parser)
   (:export #:get-children
 	   #:get-attrib-list
 	   #:get-attrib
